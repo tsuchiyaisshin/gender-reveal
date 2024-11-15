@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <div>ベビーちゃん</div>
+        <div>土屋家のベビーちゃん</div>
         <div>
           {!isChecked && <img src={male} width={200} height={200} />}
           <img src={female} width={200} height={200} />

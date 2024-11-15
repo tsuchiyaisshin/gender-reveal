@@ -10,8 +10,8 @@ function App() {
       <header className="App-header">
         <div>土屋家のベビーちゃん</div>
         <div>
-          {!isChecked && <img src={male} width={200} height={200} />}
-          <img src={female} width={200} height={200} />
+          {!isChecked && <img src={male} width={"40%"} />}
+          <img src={female} width={"40%"} />
         </div>
         <div className="which">
           {!isChecked ? <div>どっちだい？</div> : <div>女の子</div>}

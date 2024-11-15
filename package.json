@@ -1,5 +1,5 @@
 {
-  "name": "gender-revel",
+  "name": "gender-reveal",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -16,6 +16,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "rm": "rm -rf docs",
+    "mv": "mv build docs",
+    "git": "git add . && git commit && git push origin main",
     "deploy": "npm run rm && npm run build && npm run mv && npm run git"
   },
   "eslintConfig": {

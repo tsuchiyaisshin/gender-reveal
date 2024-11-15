@@ -1,22 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import male from "./gender01_male.png";
+import female from "./gender02_female.png";
+import { useState } from "react";
 
 function App() {
+  const [isChecked, setIsChecked] = useState(false);
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+        <div>ベビーちゃん</div>
+        <div>
+          {!isChecked && <img src={male} width={200} height={200} />}
+          <img src={female} width={200} height={200} />
+        </div>
+        <div className="which">
+          {!isChecked ? <div>どっちだい？</div> : <div>女の子</div>}
+        </div>
+        <div
+          className="check"
+          onClick={() => {
+            setIsChecked(!isChecked);
+          }}
         >
-          Learn React
-        </a>
+          {!isChecked ? <div>確認してみる</div> : <div>もどる</div>}
+        </div>
       </header>
     </div>
   );
